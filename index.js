@@ -5,7 +5,6 @@ element.addEventListener("mouseenter", () => {
   if (item) {
     item.style.visibility = "visible";
     item.style.opacity = 100;
-    item.style.display = "block";
   }
 });
 
@@ -14,7 +13,6 @@ element.addEventListener("mouseleave", () => {
   if (item) {
     item.style.visibility = "hidden";
     item.style.opacity = 0;
-    item.style.display = "hidden";
   }
 });
 
@@ -23,7 +21,6 @@ elementDropdown.addEventListener("mouseenter", () => {
   if (item) {
     item.style.visibility = "visible";
     item.style.opacity = 100;
-    item.style.display = "block";
   }
 });
 
@@ -32,7 +29,6 @@ elementDropdown.addEventListener("mouseleave", () => {
   if (item) {
     item.style.visibility = "hidden";
     item.style.opacity = 0;
-    item.style.display = "hidden";
   }
 });
 
@@ -60,7 +56,6 @@ const toggleMenu = (event) => {
     menuItem.classList.add("open");
   }
 };
-const toggleNavBar = false;
 
 const toggleNavBarMB = () => {
   const element = document.getElementById("navbar-sm");
