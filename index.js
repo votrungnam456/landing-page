@@ -76,7 +76,6 @@ const onBlurInput = () => {
 document.addEventListener("click", function (event) {
   const input = document.getElementById("search-component__input");
   const icon = document.getElementById("search-component__icon");
-  // Kiểm tra nếu click xảy ra bên ngoài input và container
   if (!input.contains(event.target) && !icon.contains(event.target)) {
     const element = document.getElementById("search-component");
     const isOpen = element.classList.contains("search-component__open");
@@ -86,4 +85,39 @@ document.addEventListener("click", function (event) {
       input.classList.remove("search-component__input--open");
     }
   }
+});
+
+const header = document.getElementById("header");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+    header.classList.add("hidden");
+  } else {
+    header.classList.remove("hidden");
+  }
+
+  lastScrollY = currentScrollY;
+});
+
+const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const halfScreenHeight = window.innerHeight / 2;
+
+  if (scrollY > halfScreenHeight) {
+    scrollToTopButton.classList.add("show");
+  } else {
+    scrollToTopButton.classList.remove("show");
+  }
+});
+
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

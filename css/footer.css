@@ -71,3 +71,47 @@
     flex-wrap: wrap;
   }
 }
+
+@media only screen and (max-width: 680px) {
+  .menu-footer > .menu {
+    display: block;
+  }
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 37px;
+  bottom: 35px;
+  cursor: pointer;
+  /* display: none; */
+  z-index: 1000;
+  display: block;
+  width: 61px;
+  height: 61px;
+  line-height: 63px;
+  border-radius: 100%;
+  font-size: 43px;
+  text-align: center;
+  font-family: "Epic Ride", serif;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #fff;
+  overflow: hidden;
+  -webkit-transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.scroll-to-top:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
