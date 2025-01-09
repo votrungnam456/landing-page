@@ -1,37 +1,3 @@
-const element = document.getElementById("nav-bar__elements");
-const elementDropdown = document.getElementById("dropdown-element");
-element.addEventListener("mouseenter", () => {
-  const item = document.getElementById("dropdown-element");
-  if (item) {
-    item.style.visibility = "visible";
-    item.style.opacity = 100;
-  }
-});
-
-element.addEventListener("mouseleave", () => {
-  const item = document.getElementById("dropdown-element");
-  if (item) {
-    item.style.visibility = "hidden";
-    item.style.opacity = 0;
-  }
-});
-
-elementDropdown.addEventListener("mouseenter", () => {
-  const item = document.getElementById("dropdown-element");
-  if (item) {
-    item.style.visibility = "visible";
-    item.style.opacity = 100;
-  }
-});
-
-elementDropdown.addEventListener("mouseleave", () => {
-  const item = document.getElementById("dropdown-element");
-  if (item) {
-    item.style.visibility = "hidden";
-    item.style.opacity = 0;
-  }
-});
-
 const onClickSearch = () => {
   const element = document.getElementById("search-component");
   const elementInput = document.getElementById("search-component__input");
