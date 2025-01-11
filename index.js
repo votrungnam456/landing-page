@@ -39,7 +39,7 @@ const onBlurInput = () => {
   console.log("blur");
 };
 
-document.addEventListener("click", function (event) {
+document.addEventListener("click", (event) => {
   const input = document.getElementById("search-component__input");
   const icon = document.getElementById("search-component__icon");
   if (!input.contains(event.target) && !icon.contains(event.target)) {
@@ -87,3 +87,20 @@ scrollToTopButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const inputFile = document.getElementById("inputFile");
+const fileInfo = document.getElementById("fileInfo");
+
+let file;
+inputFile.addEventListener("change", (event) => {
+  file = event.target.files[0];
+});
+
+const submitData = () => {
+  const inputDatetime = document.getElementById("inputDatetime");
+  const datetimeValue = inputDatetime.value;
+  //datetimeValue
+  // file
+
+  // call api get
+};
