@@ -82,6 +82,12 @@
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (max-width: 703px) {
+  .content > .component-title > .title-content {
+    width: 100%;
+  }
+}
 .content > .component-title > .title-content > .text {
   color: rgb(131, 131, 131);
   text-align: center;
